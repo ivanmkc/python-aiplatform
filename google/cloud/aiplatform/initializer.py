@@ -98,6 +98,9 @@ class _Config:
 
         Args:
             encryption_spec_key_name (Optional[str]): The default encryption key name to use when creating resources.
+
+        Returns:
+            encryption_spec: A gca_encryption_spec.EncryptionSpec instance from the given key name.
         """
         kms_key_name = encryption_spec_key_name or self.encryption_spec_key_name
         encryption_spec = None
